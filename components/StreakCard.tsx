@@ -19,7 +19,7 @@ export default function StreakCard({ streak, total, lastDate }: Props) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
       <div className="bg-white rounded-2xl shadow p-6 text-center">
         <div className="text-2xl mb-2">🔥</div>
-        <p className="text-gray-500 text-sm">Current Streak</p>
+        <p className="text--500 text-sm">Current Streak</p>
         <p className="text-3xl font-bold">{streak}</p>
         <span className="text-gray-500">days</span>
       </div>
