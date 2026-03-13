@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 Daily Learning Streak Tracker
 
-## Getting Started
+A full-stack web application that helps students maintain consistent learning habits by tracking daily study streaks.
 
-First, run the development server:
+Users can mark their daily study activity, view their current learning streak, check total study days, and explore their study history. The application encourages consistent learning by visually displaying progress and motivating users to maintain their streak.
+
+---
+
+# 🚀 Features
+
+- Mark **"I Studied Today"**
+- Track **current study streak**
+- View **total study days**
+- Display **last study date**
+- **Study history page** showing all recorded study dates
+- **Weekly streak progress bar**
+- **Motivational messages**
+- **Study activity heatmap (last 30 days)**
+- Interactive **cursor emoji animation**
+
+---
+
+# 🛠 Tech Stack
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Next.js API Routes**
+- **React Hooks**
+- **Vercel Deployment**
+
+---
+
+## 🔥 How Streak Logic Works
+
+The streak system tracks how many consecutive days a user studies.  
+Each time the user clicks **“I Studied Today”**, the application records the current date and updates the streak accordingly.
+
+### Streak Rules
+
+1. When the user clicks **“I Studied Today”**, today's date is saved in the study history.
+2. The system checks whether the user has already marked study for today.
+3. If today is already recorded, the system prevents duplicate entries and displays the message:
+   
+   "You have already marked today."
+
+4. If today is not recorded:
+   - The date is added to the study history.
+   - The system calculates whether the user studied **yesterday**.
+
+5. If the user studied yesterday, the **streak continues and increases by 1**.
+
+6. If the user missed one or more days, the **streak resets to 1**.
+
+### Example
+
+| Date | Activity | Streak |
+|-----|-----|-----|
+| 10 March | Studied | 1 |
+| 11 March | Studied | 2 |
+| 12 March | Studied | 3 |
+| 13 March | Missed | Streak breaks |
+| 14 March | Studied | 1 |
+
+This logic ensures that streaks grow only when the user studies **on consecutive days**, encouraging consistent daily learning.
+
+---
+
+# ⚙️ Setup Instructions
+
+Follow these steps to run the project locally.
+
+### 1️⃣ Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/Girish1703/learning-streak-tracker.git
