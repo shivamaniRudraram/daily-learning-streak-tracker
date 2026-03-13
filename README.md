@@ -73,4 +73,4 @@ Follow these steps to run the project locally.
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/Girish1703/learning-streak-tracker.git
+git clone https://github.com/shivamaniRudraram/daily-learning-streak-tracker.git
